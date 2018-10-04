@@ -1,0 +1,23 @@
+{
+  "name": "roboto",
+  "version": "1.0.0",
+  "description": "This bot will automate trading",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "robot",
+    "exchange"
+  ],
+  "author": "Bartosz Wojciechowski",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "puppeteer": "^1.5.0"
+  }
+}
