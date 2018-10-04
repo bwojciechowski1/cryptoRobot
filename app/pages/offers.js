@@ -7,7 +7,7 @@ class OffersPage {
 
     async navigateToMarketPage() {
         try {
-            await this.page.goto(config.appURL + 'main/market')
+            await this.page.goto(config.APP_URL + 'main/market')
         } catch (e) {
             console.error(e);
             process.exit();
