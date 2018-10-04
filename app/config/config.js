@@ -3,6 +3,8 @@ const LOGIN_URL = APP_URL + 'auth/login';
 const LOGIN = 'admin';
 const PASSWORD = 'admin';
 const BASE_PRICE = 3000;
+const ITERATIONS = 4;
+const OFFERS = 20;
 
 const SELECTOR_USERNAME_INPUT = 'input[name="email"]';
 const SELECTOR_PASSWORD_INPUT = 'input[name="password"]';
@@ -37,5 +39,7 @@ module.exports = {
     AMOUNT,
     CONFIRM_BUY,
     CONFIRM_SELL,
-    BASE_PRICE
+    BASE_PRICE,
+    ITERATIONS,
+    OFFERS
 };

@@ -28,29 +28,13 @@ let offers;
     await login.login();
     await offers.navigateToMarketPage()
 
-    var x = Math.floor(Math.random() * (6 - 0) + 0);
-    console.log(prices[x])
-    for (let i=0; i<=20; i++) {
-        await offers.makeBuyOffer(`${Math.round((Math.random()* (20 - 0.01) + 0.01)*100)/100}`, `${Math.round(Math.random() * (prices[x] - (prices[x]-50)) + (prices[x]-50))}`)
-        await offers.makeSellOffer(`${Math.round((Math.random()* (20 - 0.01) + 0.01)*100)/100}`, `${Math.round(Math.random() * (prices[x] - (prices[x]-50)) + (prices[x]-50))}`)
-    }
-    var x = Math.floor(Math.random() * (6 - 0) + 0);
-    console.log(prices[x])
-    for (let i=0; i<=20; i++) {
-        await offers.makeBuyOffer(`${Math.round((Math.random()* (20 - 0.01) + 0.01)*100)/100}`, `${Math.floor(Math.random() * (prices[x] - (prices[x]-50)) + (prices[x]-50))}`)
-        await offers.makeSellOffer(`${Math.round((Math.random()* (20 - 0.01) + 0.01)*100)/100}`, `${Math.floor(Math.random() * (prices[x] - (prices[x]-50)) + (prices[x]-50))}`)
-    }
-    var x = Math.floor(Math.random() * (6 - 0) + 0);
-    console.log(prices[x])
-    for (let i=0; i<=20; i++) {
-        await offers.makeBuyOffer(`${Math.round((Math.random()* (20 - 0.01) + 0.01)*100)/100}`, `${Math.floor(Math.random() * (prices[x] - (prices[x]-50)) + (prices[x]-50))}`)
-        await offers.makeSellOffer(`${Math.round((Math.random()* (20 - 0.01) + 0.01)*100)/100}`, `${Math.floor(Math.random() * (prices[x] - (prices[x]-50)) + (prices[x]-50))}`)
-    }
-    var x = Math.floor(Math.random() * (6 - 0) + 0);
-    console.log(prices[x])
-    for (let i=0; i<=20; i++) {
-        await offers.makeBuyOffer(`${Math.round((Math.random()* (20 - 0.01) + 0.01)*100)/100}`, `${Math.floor(Math.random() * (prices[x] - (prices[x]-50)) + (prices[x]-50))}`)
-        await offers.makeSellOffer(`${Math.round((Math.random()* (20 - 0.01) + 0.01)*100)/100}`, `${Math.floor(Math.random() * (prices[x] - (prices[x]-50)) + (prices[x]-50))}`)
+    for (let y=0; y<=config.ITERATIONS; y++) {
+        var x = Math.floor(Math.random() * (6 - 0) + 0);
+        console.log(prices[x])
+        for (let i=0; i<=config.OFFERS; i++) {
+            await offers.makeBuyOffer(`${Math.round((Math.random()* (20 - 0.01) + 0.01)*100)/100}`, `${Math.round(Math.random() * (prices[x] - (prices[x]-50)) + (prices[x]-50))}`)
+            await offers.makeSellOffer(`${Math.round((Math.random()* (20 - 0.01) + 0.01)*100)/100}`, `${Math.round(Math.random() * (prices[x] - (prices[x]-50)) + (prices[x]-50))}`)
+        }
     }
 
     return closeBrowser();
