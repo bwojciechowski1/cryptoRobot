@@ -8,6 +8,8 @@ let offers;
 
 (async () => {
     let { browser, page } = await puppeteerOptions.initialize();
+    let base = config.BASE_PRICE;
+    let prices = [base+100, base+150, base+200, base+250, base+300, base+350, base+400];
 
     async function setupPage(page) {
         login = new LoginPage(page);
@@ -18,9 +20,6 @@ let offers;
         browser.close();
         return 'All done!';
     }
-
-    let base = config.BASE_PRICE;
-    let prices = [base+100, base+150, base+200, base+250, base+300, base+350, base+400];
 
 
     await setupPage(page);
