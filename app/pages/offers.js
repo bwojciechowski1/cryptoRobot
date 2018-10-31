@@ -23,7 +23,6 @@ class OffersPage {
             await this.page.type('input[name=amount]', amount);
         } catch (e) {
             console.error(e);
-            process.exit();
 
         }
     }
@@ -36,7 +35,6 @@ class OffersPage {
             console.log('> Buy offer - (units price):', amount, price)
         } catch (e) {
             console.error(e);
-            process.exit();
         }
     }
 
@@ -48,7 +46,6 @@ class OffersPage {
             console.log('> Sell offer - (units price):', amount, price)
         } catch (e) {
             console.error(e);
-            process.exit();
         }
     }
 
@@ -62,7 +59,6 @@ class OffersPage {
             console.log('Changed market')
         } catch (e) {
             console.error(e);
-            process.exit();
         }
     }
 }
