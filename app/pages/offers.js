@@ -18,7 +18,7 @@ class OffersPage {
 
     async makeOffer(amount, price) {
         try {
-            await this.page.waitFor(100);
+            await new Promise(resolve => setTimeout(() => resolve(true), 1500));
             await this.page.type('input[name=pricePerUnit]', price);
             await this.page.type('input[name=amount]', amount);
         } catch (e) {
@@ -42,7 +42,6 @@ class OffersPage {
         try {
             await this.makeOffer(amount, price);
             await this.page.click('button.sell');
-
             console.log('> Sell offer - (units price):', amount, price)
         } catch (e) {
             console.error(e);

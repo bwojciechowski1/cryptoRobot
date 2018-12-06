@@ -1,15 +1,15 @@
 const APP_URL = 'null';
 const LOGIN_URL = APP_URL + 'auth/login';
-const LOGIN = 'paweł nowak';
-const PASSWORD = 'admin';
-const BASE_PRICE = 3800;
-const ITERATIONS = 1;
-const OFFERS = 3;
+const LOGIN = 'null';
+const PASSWORD = 'null';
+const BASE_PRICE = 4800;
+const ITERATIONS = 3;
+const OFFERS = 10;
 
 const browser = {
     width: 1920,
     height: 1080,
-    headless: true,
+    headless: false,
     slowMo: null
 };
 
