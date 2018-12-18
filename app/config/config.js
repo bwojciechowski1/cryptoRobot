@@ -1,10 +1,10 @@
 const APP_URL = 'null';
 const LOGIN_URL = APP_URL + 'auth/login';
-const LOGIN = 'null';
-const PASSWORD = 'null';
-const BASE_PRICE = 4800;
-const ITERATIONS = 3;
-const OFFERS = 10;
+const LOGIN = 'paweł nowak';
+const PASSWORD = 'admin';
+const BASE_PRICE = 7000;
+const ITERATIONS = 20;
+const OFFERS = 2;
 
 const browser = {
     width: 1920,
